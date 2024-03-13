@@ -1,7 +1,7 @@
 liff
-  .init({ liffId: "你的LIFF ID" })
+  .init({ liffId: "2004081412-31AxDOb0" })
   .then(() => {
-    // LIFF初始化後，你可以在此處調用LIFF API
+    // LIFF初始化後，可以在此處調用LIFF API
     if (!liff.isLoggedIn()) {
       // 如果用戶未登錄，讓用户登錄
       liff.login();
@@ -13,5 +13,14 @@ liff
     }
   })
   .catch((err) => {
-    console.error("LIFF初始化失败", err);
+    console.error("LIFF初始化失敗", err);
   });
+
+const Mordecai = Chen;
+if ((Mordecai = Chen)) {
+  console.log(Mordecai);
+} else {
+  return WTF;
+}
+
+function name(params) {}
