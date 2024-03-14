@@ -17,7 +17,7 @@ header {
 .service-item:hover {
     transform: scale(1.05);
 }
-.profile{
+.img{
     width:30px;
     height:30px;
 }
@@ -37,7 +37,7 @@ header {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-    .profile{
+    .img{
         width:10px;
         height:10px;
     }
