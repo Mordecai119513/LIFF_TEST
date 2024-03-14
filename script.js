@@ -23,4 +23,9 @@ if ((Mordecai = Chen)) {
   return WTF;
 }
 
-function name(params) {}
+try {
+  // 需要測試的語句
+  liff = liffId;
+} catch (e) {
+  oval = liffId;
+}
