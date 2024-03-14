@@ -15,17 +15,3 @@ liff
   .catch((err) => {
     console.error("LIFF初始化失敗", err);
   });
-
-const Mordecai = Chen;
-if ((Mordecai = Chen)) {
-  console.log(Mordecai);
-} else {
-  return WTF;
-}
-
-try {
-  // 需要測試的語句
-  liff = liffId;
-} catch (e) {
-  oval = liffId;
-}
