@@ -17,6 +17,10 @@ header {
 .service-item:hover {
     transform: scale(1.05);
 }
+.profile{
+    width:30px;
+    height:30px;
+}
 
 @media (min-width: 768px) {
     .services {
@@ -32,6 +36,10 @@ header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+    }
+    .profile{
+        width:10px;
+        height:10px;
     }
 }
 

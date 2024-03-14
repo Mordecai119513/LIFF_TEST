@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
   function displayUserProfile(profile) {
     // 創建元素來展示用戶名稱和頭像
