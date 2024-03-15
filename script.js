@@ -25,7 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
           // 用戶已登錄，獲取用戶信息
           liff
             .getProfile()
-            .then(displayUserProfile)
+            .then((profile) => {
+              // 顯示用戶資料
+              displayUserProfile(profile);
+              // 準備發送給漸強的資料
+              const messageData = {
+                userId: profile.userId,
+                messages: [
+                  {
+                    type: "text",
+                    text: "這是從LIFF應用程式發送的測試訊息",
+                  },
+                ],
+              };
+              sendToCrescendo(messageData); // 發送訊息給漸強
+            })
             .catch((err) => {
               console.error("獲取用戶訊息失敗", err);
             });
@@ -36,16 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // 呼叫initializeLiff函數並傳入您的LIFF ID
-  initializeLiff("2004081412-31AxDOb0");
+  initializeLiff("你的LIFF ID");
 });
 
-// 漸強實驗室串接測試
-
 function sendToCrescendo(dataToSend) {
-  const crescendoAPIKey =
-    "$ dredd init -r apiary -j apiaryApiKey:e7be0eeff9489ea8ebe039db88a57561 -j apiaryApiName:lifftest"; // 漸強API金鑰
-  const crescendoAPIUrl = "https://liff.line.me/2004081412-31AxDOb0"; // LIFF的URL
+  const crescendoAPIKey = "e7be0eeff9489ea8ebe039db88a57561";
+  const crescendoAPIUrl = "你的漸強API Endpoint URL";
 
   fetch(crescendoAPIUrl, {
     method: "POST",
@@ -68,14 +78,3 @@ function sendToCrescendo(dataToSend) {
       console.error("漸強API調用失敗:", error);
     });
 }
-
-const messageData = {
-  userId: profile.userId, // 使用從LIFF獲取的實際LINE用戶ID
-  messages: [
-    {
-      type: "text",
-      text: "這是從LIFF應用程式發送的測試訊息",
-    },
-  ],
-};
-sendToCrescendo(messageData); // 發送訊息給漸強
