@@ -50,12 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  initializeLiff("你的LIFF ID");
+  initializeLiff("2004081412-31AxDOb0");
 });
 
 function sendToCrescendo(dataToSend) {
   const crescendoAPIKey = "e7be0eeff9489ea8ebe039db88a57561";
-  const crescendoAPIUrl = "你的漸強API Endpoint URL";
+  const crescendoAPIUrl =
+    "http://private-8803f5-cresclab.apiary-mock.com/openapi/v1/binding/bindlink/";
 
   fetch(crescendoAPIUrl, {
     method: "POST",
