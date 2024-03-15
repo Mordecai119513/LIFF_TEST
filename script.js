@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function sendToCrescendo(dataToSend) {
-  const crescendoAPIKey = "e7be0eeff9489ea8ebe039db88a57561";
+  const crescendoAPIKey = "65f4227cb89a4300a0050f00";
   const crescendoAPIUrl =
     "https://private-8803f5-cresclab.apiary-mock.com/openapi/v1/binding/bindlink/";
 
@@ -49,7 +49,7 @@ function sendToCrescendo(dataToSend) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${crescendoAPIKey}`,
+      Authorization: `Bearer ${"65f4227cb89a4300a0050f00"}`,
     },
     body: JSON.stringify(dataToSend),
   })
