@@ -25,21 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // 用戶已登錄，獲取用戶信息
           liff
             .getProfile()
-            .then((profile) => {
-              // 顯示用戶資料
-              displayUserProfile(profile);
-              // 準備發送給漸強的資料
-              const messageData = {
-                userId: profile.userId,
-                messages: [
-                  {
-                    type: "text",
-                    text: "這是從LIFF應用程式發送的測試訊息",
-                  },
-                ],
-              };
-              sendToCrescendo(messageData); // 發送訊息給漸強
-            })
+            .then(displayUserProfile)
             .catch((err) => {
               console.error("獲取用戶訊息失敗", err);
             });
@@ -50,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  // 呼叫initializeLiff函數並傳入您的LIFF ID
   initializeLiff("2004081412-31AxDOb0");
 });
 
@@ -62,7 +49,7 @@ function sendToCrescendo(dataToSend) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${e7be0eeff9489ea8ebe039db88a57561}`,
+      Authorization: `Bearer ${crescendoAPIKey}`,
     },
     body: JSON.stringify(dataToSend),
   })
