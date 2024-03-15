@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function sendToCrescendo(dataToSend) {
-  const crescendoAPIKey = "65f4227cb89a4300a0050f00";
+  const crescendoAPIKey = "65f4227cb89a4300a0050f00"; // 金鑰測試
   const crescendoAPIUrl =
-    "https://private-8803f5-cresclab.apiary-mock.com/openapi/v1/binding/bindlink/";
+    "https://private-8803f5-cresclab.apiary-mock.com/openapi/v1/binding/bindlink/?New%20item=";
 
   fetch(crescendoAPIUrl, {
     method: "POST",
