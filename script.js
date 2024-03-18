@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function sendToCrescendo(dataToSend) {
   const crescendoAPIKey = "T7T1K2TTQy/hsa2iTXO8gWGNmvCU16vfKh0v2EPMSbY="; // 金鑰測試
-  const crescendoAPIUrl = "https://api.cresclab.com";
+  const crescendoAPIUrl =
+    "https://private-8803f5-cresclab.apiary-mock.com/openapi/v1/tag/";
 
   fetch(crescendoAPIUrl, {
     method: "POST",
